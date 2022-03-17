@@ -17,12 +17,8 @@
 <script>
   function goToURL(){
     var URL;
-    var txt = document.querySelector('#url').value;
-    if(txt.includes('https://') || txt.includes('http://')){
-      URL = txt.value;
-    } else {
-      URL = 'https://' + txt.value
-    }
+    var txt = document.querySelector('#url');
+    URL = 'https://' + txt.value;
     window.location.href = URL;
   }
 </script>
