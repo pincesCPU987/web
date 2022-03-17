@@ -7,8 +7,21 @@
     <p>
       This is my browser, in your browser.
     </p>
-    <frameset>
-      <frame src="/web/newtab/">
-    </frameset>
+    <form onsubmit="changeURL(event);">
+      <input type="url" id="txt" value="https://">
+      <input type="submit" value="Go">
+    </form>
+    <br><br>
+    <iframe src="/web/newtab/" id="output">
+      
+    </iframe>
+    <script>
+      function changeURL(e){
+        e.preventDefault();
+        var txt = document.querySelector('#txt');
+        var output = document.querySelector('#output');
+        output.src = txt.value;
+      }
+    </script>
   </body>
 </html>
