@@ -16,9 +16,8 @@
 </form>
 <script>
   function goToURL(){
-    var URL;
+    e.preventDefault();
     var txt = document.querySelector('#url');
-    URL = 'https://' + txt.value;
-    window.location.href = URL;
+    window.location.href = txt.value;
   }
 </script>
