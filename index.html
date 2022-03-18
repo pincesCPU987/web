@@ -13,7 +13,7 @@
         <input type="submit" value="Go">
       </form>
     </div>
-    <iframe src="/web/newtab/" id="output" height="98%" width="98%">
+    <iframe src="/web/newtab/" id="output">
       
     </iframe>
     <script>
@@ -24,5 +24,11 @@
         output.src = txt.value;
       }
     </script>
+    <style>
+      #output {
+        width:98%;
+        height:98%;
+      }
+    </style>
   </body>
 </html>
