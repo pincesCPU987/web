@@ -9,13 +9,13 @@
   <br><br>
   <a href="https://mail.yahoo.com">Yahoo! Mail</a>
 </p>
-<form onsubmit="goToURL();">
+<form onsubmit="goToURL(event)">
   Where do you want to go?
   <input type="url" id="url" value="https://">
   <input type="submit" value="Go">
 </form>
 <script>
-  function goToURL(){
+  function goToURL(e){
     e.preventDefault();
     var txt = document.querySelector('#url');
     window.location.href = txt.value;
