@@ -4,7 +4,10 @@
     <title>Title</title>
   </head>
   <body>
-    <div class="content" draggable="true">
+    <iframe src="/web/newtab/" id="output">
+      
+    </iframe>
+    <div class="content">
       <p>
         This is my browser, inside your browser.
       </p>
@@ -13,9 +16,6 @@
         <input type="submit" value="Go">
       </form>
     </div>
-    <iframe src="/web/newtab/" id="output">
-      
-    </iframe>
     <script>
       function changeURL(e){
         e.preventDefault();
