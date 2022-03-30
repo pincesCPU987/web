@@ -1,14 +1,27 @@
 <title>New Tab</title>
 <p>
   <a href="https://google.com">Google</a>
+  <form onsubmit="searchGoogle(event)">
+    <input type="text" id="google" placeholder="Search Google®">
+    <input type="submit" value="Go">
+  </form>
   <br><br>
   <a href="https://mail.google.com">Gmail</a>
 </p>
 <p>
   <a href="https://yahoo.com">Yahoo!</a>
+  <form onsubmit="searchYahoo(event)">
+    <input type="text" id="yahoo" placeholder="Search Yahoo!®">
+    <input type="submit" value="Go">
+  </form>
   <br><br>
   <a href="https://mail.yahoo.com">Yahoo! Mail</a>
 </p>
+<form onsubmit="mailTo(event)">
+  Mail to:
+  <input type="email" id="mail" placeholder="Put email adress here.">
+  <input type="submit" value="Go">
+</form>
 <form onsubmit="goToURL(event)">
   Where do you want to go?
   <input type="url" id="url" value="https://">
@@ -19,5 +32,20 @@
     e.preventDefault();
     var txt = document.querySelector('#url');
     window.location.href = txt.value;
+  }
+  function searchGoogle(e){
+    e.preventDefault();
+    var txt = document.querySelector('#google');
+    window.location.href = 'https://www.google.com/search?q=' + txt.value.trim().split(' ').join('+');
+  }
+  function searchYahoo(e){
+    e.preventDefault();
+    var txt = document.querySelector('#yahoo');
+    window.location.href = 'https://search.yahoo.com/search?p=' + txt.value.trim().split(' ').join('+');
+  }
+  function mailTo(e){
+    e.preventDefault();
+    var txt = document.querySelector('#mail');
+    window.location.href = 'mailto:' + txt.value.trim();
   }
 </script>
