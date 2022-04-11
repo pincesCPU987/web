@@ -29,7 +29,7 @@
         var url = location.search;
         if(url){
           const urlParams = new URLSearchParams(url);
-          document.querySelector('#output').src = urlParams.location;
+          document.querySelector('#output').src = urlParams['location'];
         }
       }
     </script>
