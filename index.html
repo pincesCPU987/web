@@ -26,9 +26,10 @@
         } else {
           output.src = txt.value;
         }
-        var url = document.location.href.search;
+        var url = location.search;
         if(url){
-          document.querySelector('#output').src = url('location')
+          const urlParams = new URLSearchParams(url);
+          document.querySelector('#output').src = urlParams['location'];
         }
       }
     </script>
