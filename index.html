@@ -24,12 +24,12 @@
         if(txt.value == 'https://newtab'){
           output.src = 'https://pincescpu987.github.io/web/newtab/';
         } else {
-          output.src = txt.value;
+          output.data = txt.value;
         }
         var url = location.search;
         if(url){
           const urlParams = new URLSearchParams(url);
-          document.querySelector('#output').src = urlParams.get('location');
+          document.querySelector('#output').data = urlParams.get('location');
         }
       }
     </script>
