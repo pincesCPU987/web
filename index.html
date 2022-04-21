@@ -13,7 +13,7 @@
         <input type="submit" value="Go">
       </form>
     </div>
-    <embed data="/web/newtab/" id="output">
+    <embed src="/web/newtab/" id="output">
       
     </embed>
     <script>
@@ -22,16 +22,16 @@
         var txt = document.querySelector('#txt');
         var output = document.querySelector('#output');
         if(txt.value == 'https://newtab'){
-          output.data = 'https://pincescpu987.github.io/web/newtab/';
+          output.src = 'https://pincescpu987.github.io/web/newtab/';
         } else {
-          output.data = txt.value;
+          output.src = txt.value;
         }
         
       }
       var url = location.search;
         if(url){
           const urlParams = new URLSearchParams(url);
-          document.querySelector('#output').data = urlParams.get('location');
+          document.querySelector('#output').src = urlParams.get('location');
         }
     </script>
     <style>
